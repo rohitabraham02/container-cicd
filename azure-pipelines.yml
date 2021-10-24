@@ -37,3 +37,9 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    - task: AzureCLI@2
+      inputs:
+        azureSubscription: 'MSDN Platforms Subscription(3)(cb697725-96ec-4e23-b0f1-9a862b9b3a6e)'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: 'az container create -g $(resourceGrop) --name rohitabrahamcontainercicd --image $(acrLoginServer)/rohitabrahamnodejs:$(Build.BuildId) --cpu 1 --memory 1 --registry-login-server $(acrLoginServer) --registry-username $(acrName) --registry-password $(acrPassword) --dns-name-label rohitabrahamcontainercicd --ports 80'''
