@@ -8,7 +8,7 @@
   // App
   const app = express();
   app.get('/', (req, res) => {
-    res.send('Hello World version');
+    res.send('Hello World version 2');
   });
 
   app.listen(PORT, HOST);
