@@ -45,4 +45,4 @@ stages:
        deployToSlotOrASE: true
        resourceGroupName: 'app-service'
        slotName: 'production'
-       containers: 'myserviceregistryvlc.azurecr.io/myservicevlc:55'
+       containers: 'myserviceregistryvlc.azurecr.io/myservicevlc:$(Build.BuildId)'
