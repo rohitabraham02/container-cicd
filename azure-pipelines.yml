@@ -40,6 +40,8 @@ stages:
           $(tag)
     - task: AzureWebAppContainer@1
       inputs:
-         azureSubscription: 'MSDN Platforms Subscription(cb697725-96ec-4e23-b0f1-9a862b9b3a6e)'
-         appName: 'app-service-vlc'
-         containers: 'vlcappservice.azurecr.io/nodeapplication:46'
+          azureSubscription: 'MSDN Platforms Subscription(4)(cb697725-96ec-4e23-b0f1-9a862b9b3a6e)'
+          appName: 'app-service-vlc'
+          containers: 'vlcappservice.azurecr.io/nodeapplication:46'
+    
+
